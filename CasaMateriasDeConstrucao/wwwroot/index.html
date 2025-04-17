@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiais do Théo - Sua Loja de Materiais de Construção</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ícones do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Nosso arquivo CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 
+        NAVBAR PRINCIPAL
+        - Barra de navegação fixa no topo
+        - Logotipo + links de navegação
+        - Botões de login e carrinho
+        - Responsivo: colapsa em menu hamburguer em telas pequenas
+    -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-house-gear-fill"></i> Materiais do Théo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produtos">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-outline-light me-2">
+                        <i class="bi bi-person-fill"></i> Login
+                    </a>
+                    <a href="#" class="btn btn-light">
+                        <i class="bi bi-cart-fill"></i> Carrinho
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 
+        HERO SECTION
+        - Imagem de fundo com overlay escuro
+        - Título principal e chamada para ação
+        - Botões destacados
+    -->
+    <section class="hero-section">
+        <div class="container hero-content text-center">
+            <h1 class="display-4 fw-bold mb-4">Tudo para sua obra em um só lugar!</h1>
+            <p class="lead mb-5">Os melhores materiais de construção com os melhores preços da região</p>
+            <a href="#produtos" class="btn btn-primary btn-lg px-4 me-2">Ver Produtos</a>
+            <a href="#contato" class="btn btn-outline-light btn-lg px-4">Fale Conosco</a>
+        </div>
+    </section>
+
+    <!-- 
+        DESTAQUES
+        - 3 cards com ícones destacando benefícios
+        - Layout responsivo (1 coluna em mobile, 3 em desktop)
+    -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="card border-0 bg-white shadow-sm p-4">
+                        <i class="bi bi-truck text-primary fs-1 mb-3"></i>
+                        <h3>Entrega Rápida</h3>
+                        <p class="text-muted">Entregamos em toda a região em até 48 horas</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="card border-0 bg-white shadow-sm p-4">
+                        <i class="bi bi-currency-dollar text-primary fs-1 mb-3"></i>
+                        <h3>Preços Baixos</h3>
+                        <p class="text-muted">Garantimos os melhores preços do mercado</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-white shadow-sm p-4">
+                        <i class="bi bi-shield-check text-primary fs-1 mb-3"></i>
+                        <h3>Qualidade</h3>
+                        <p class="text-muted">Produtos das melhores marcas e fabricantes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        SEÇÃO DE PRODUTOS
+        - Grid de cards de produtos (4 por linha em desktop)
+        - Efeito hover nos cards
+        - Preços e botão de adicionar ao carrinho
+    -->
+    <section id="produtos" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Nossos Produtos</h2>
+                <p class="text-muted">Confira nossa seleção de materiais de construção</p>
+            </div>
+            
+            <div class="row">
+                <!-- Cada produto é um card com imagem, descrição e preço -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="https://images.unsplash.com/photo-1599623560574-39d485900c95?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Cimento">
+                        <div class="card-body">
+                            <h5 class="card-title">Cimento CP II 32kg</h5>
+                            <p class="card-text text-muted">Cimento Portland Composto para obras em geral.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">R$ 35,90</span>
+                                <button class="btn btn-sm btn-outline-primary">Adicionar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mais produtos aqui... -->
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary">Ver Todos os Produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        SOBRE NÓS
+        - Imagem + texto
+        - Layout alternado (imagem à esquerda, texto à direita)
+    -->
+    <section id="sobre" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Loja Materiais do Théo" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Sobre a Materiais do Théo</h2>
+                    <p>Fundada em 2010, a Materiais do Théo surgiu com o objetivo de fornecer materiais de construção de qualidade com atendimento personalizado e preços justos.</p>
+                    <!-- Mais conteúdo sobre... -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        DEPOIMENTOS
+        - Cards com depoimentos de clientes
+        - Foto + nome + profissão do cliente
+    -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">O que dizem nossos clientes</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-chat-quote-fill text-primary fs-1 mb-3"></i>
+                            <p class="card-text mb-4">"Sempre encontro tudo que preciso na Materiais do Théo. Atendimento excelente e preços competitivos!"</p>
+                            <div class="d-flex justify-content-center">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle me-3" width="50" alt="Cliente">
+                                <div class="text-start">
+                                    <h6 class="mb-0">Maria Silva</h6>
+                                    <small class="text-muted">Arquiteta</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mais depoimentos aqui... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        FORMULÁRIO DE CONTATO
+        - Formulário + informações de contato
+        - Estilizado com fundo azul e texto branco
+    -->
+    <section id="contato" class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Entre em Contato</h2>
+                <p>Tire suas dúvidas ou faça seu pedido</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <form>
+                        <!-- Campos do formulário -->
+                    </form>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card bg-white text-dark p-4 h-100">
+                        <h4 class="mb-4">Informações de Contato</h4>
+                        <!-- Informações de contato -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa de localização incorporado do Google Maps -->
+    <div class="container-fluid p-0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.106696296001!2d-46.65390548502206!3d-23.564611167596592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7dbf9ff57%3A0x4ca8eb5c4f7ecca9!2sPra%C3%A7a%20da%20S%C3%A9%20-%20S%C3%A9%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1622372738946!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- 
+        RODAPÉ
+        - Logotipo e descrição
+        - Links rápidos
+        - Newsletter
+        - Informações de copyright
+    -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Conteúdo do rodapé -->
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

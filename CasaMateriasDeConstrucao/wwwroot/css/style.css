@@ -1,0 +1,78 @@
+/* 
+ * ESTILOS GERAIS
+ * - Define estilos base para o site
+ * - Personalizações além do Bootstrap
+ */
+
+/* 
+ * HERO SECTION
+ * - Imagem de fundo com overlay escuro
+ * - Centralização do conteúdo
+ */
+ .hero-section {
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    position: relative;
+}
+
+/* Overlay escuro para melhor legibilidade do texto */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Conteúdo do hero (posicionado acima do overlay) */
+.hero-content {
+    position: relative;
+    color: white;
+}
+
+/* 
+ * CARDS DE PRODUTOS
+ * - Efeito hover com leve elevação
+ * - Altura fixa para uniformidade
+ */
+.product-card {
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+/* Efeito ao passar o mouse */
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 
+ * RODAPÉ
+ * - Cor de fundo escura
+ * - Espaçamento interno
+ */
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
+}
+
+/* 
+ * ESTILOS RESPONSIVOS ADICIONAIS
+ * - Ajustes para diferentes tamanhos de tela
+ */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}

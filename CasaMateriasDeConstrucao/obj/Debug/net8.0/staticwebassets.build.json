@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "kz2T8aMcyBKHSwPEMUSYl9DzSuuGaW75h9DozSC9N8g=",
+  "Source": "CasaMateriasDeConstrucao",
+  "BasePath": "_content/CasaMateriasDeConstrucao",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CasaMateriasDeConstrucao\\wwwroot",
+      "Source": "CasaMateriasDeConstrucao",
+      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "BasePath": "_content/CasaMateriasDeConstrucao",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\index.html",
+      "SourceId": "CasaMateriasDeConstrucao",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "BasePath": "_content/CasaMateriasDeConstrucao",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\protudos.html",
+      "SourceId": "CasaMateriasDeConstrucao",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "BasePath": "_content/CasaMateriasDeConstrucao",
+      "RelativePath": "protudos.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\protudos.html"
+    },
+    {
+      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\style.css",
+      "SourceId": "CasaMateriasDeConstrucao",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "BasePath": "_content/CasaMateriasDeConstrucao",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
+    }
+  ]
+}
