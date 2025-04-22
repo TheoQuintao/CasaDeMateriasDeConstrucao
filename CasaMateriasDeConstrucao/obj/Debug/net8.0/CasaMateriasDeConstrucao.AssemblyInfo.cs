@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CasaMateriasDeConstrucao")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+593e4bd4f4a57b974602d03f17ee125eb0a8c2b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f85bb7aac79391e4190a34620a80b2614232aa2")]
 [assembly: System.Reflection.AssemblyProductAttribute("CasaMateriasDeConstrucao")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CasaMateriasDeConstrucao")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
