@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Materiais do Théo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ícones do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Nosso arquivo CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Estilos específicos para a página de produtos */
+        .products-header {
+            background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            background-size: cover;
+            padding: 80px 0;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .products-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .products-header-content {
+            position: relative;
+            color: white;
+        }
+        
+        .breadcrumb {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            padding: 10px 15px;
+        }
+        
+        .filter-card {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .filter-header {
+            background-color: var(--bs-primary);
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        
+        .filter-body {
+            padding: 15px;
+            background-color: white;
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-img-container {
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+        }
+        
+        .product-img {
+            max-height: 100%;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+        }
+        
+        .product-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .product-price {
+            font-weight: bold;
+            color: var(--bs-primary);
+            font-size: 1.2rem;
+        }
+        
+        .product-old-price {
+            text-decoration: line-through;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .product-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        
+        .pagination .page-item.active .page-link {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        
+        .pagination .page-link {
+            color: var(--bs-primary);
+        }
+        
+        .category-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .category-list li {
+            margin-bottom: 5px;
+        }
+        
+        .category-list a {
+            color: #495057;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .category-list a:hover {
+            color: var(--bs-primary);
+            padding-left: 5px;
+        }
+        
+        .rating {
+            color: #ffc107;
+            margin-bottom: 5px;
+        }
+        
+        .product-stock {
+            font-size: 0.9rem;
+        }
+        
+        .in-stock {
+            color: #28a745;
+        }
+        
+        .low-stock {
+            color: #ffc107;
+        }
+        
+        .out-of-stock {
+            color: #dc3545;
+        }
+        
+        @media (max-width: 768px) {
+            .filter-sidebar {
+                margin-bottom: 30px;
+            }
+            
+            .product-img-container {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar igual ao site principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-house-gear-fill"></i> Materiais do Théo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar produtos...">
+                        <button class="btn btn-light" type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                    <a href="login.html" class="btn btn-outline-light ms-2">
+                        <i class="bi bi-person-fill"></i>
+                    </a>
+                    <a href="carrinho.html" class="btn btn-light ms-2">
+                        <i class="bi bi-cart-fill"></i>
+                        <span class="badge bg-danger">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho da página de produtos -->
+    <header class="products-header">
+        <div class="container products-header-content">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Produtos</li>
+                </ol>
+            </nav>
+            <h1 class="fw-bold mb-3">Nossos Produtos</h1>
+            <p class="lead">Encontre tudo para sua obra em um só lugar</p>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="container mb-5">
+        <div class="row">
+            <!-- Sidebar de filtros -->
+            <aside class="col-lg-3 filter-sidebar">
+                <div class="filter-card">
+                    <div class="filter-header" data-bs-toggle="collapse" href="#categoriasFilter">
+                        <h5 class="mb-0"><i class="bi bi-list-ul me-2"></i>Categorias</h5>
+                    </div>
+                    <div class="filter-body collapse show" id="categoriasFilter">
+                        <ul class="category-list">
+                            <li><a href="#">Cimentos <span class="badge bg-primary float-end">42</span></a></li>
+                            <li><a href="#">Tijolos e Blocos <span class="badge bg-primary float-end">28</span></a></li>
+                            <li><a href="#">Areia e Pedra <span class="badge bg-primary float-end">15</span></a></li>
+                            <li><a href="#">Tintas <span class="badge bg-primary float-end">36</span></a></li>
+                            <li><a href="#">Hidráulica <span class="badge bg-primary float-end">54</span></a></li>
+                            <li><a href="#">Elétrica <span class="badge bg-primary float-end">47</span></a></li>
+                            <li><a href="#">Ferragens <span class="badge bg-primary float-end">39</span></a></li>
+                            <li><a href="#">Madeiras <span class="badge bg-primary float-end">23</span></a></li>
+                            <li><a href="#">Pisos e Revestimentos <span class="badge bg-primary float-end">67</span></a></li>
+                            <li><a href="#">Ferramentas <span class="badge bg-primary float-end">58</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="filter-card">
+                    <div class="filter-header" data-bs-toggle="collapse" href="#precoFilter">
+                        <h5 class="mb-0"><i class="bi bi-currency-dollar me-2"></i>Faixa de Preço</h5>
+                    </div>
+                    <div class="filter-body collapse show" id="precoFilter">
+                        <div class="mb-3">
+                            <input type="range" class="form-range" id="priceRange" min="0" max="1000" step="10">
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="minPrice" class="form-label">Mínimo</label>
+                                <input type="number" class="form-control" id="minPrice" value="0">
+                            </div>
+                            <div class="col-6">
+                                <label for="maxPrice" class="form-label">Máximo</label>
+                                <input type="number" class="form-control" id="maxPrice" value="1000">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filter-card">
+                    <div class="filter-header" data-bs-toggle="collapse" href="#marcasFilter">
+                        <h5 class="mb-0"><i class="bi bi-tags me-2"></i>Marcas</h5>
+                    </div>
+                    <div class="filter-body collapse show" id="marcasFilter">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="marcaVotoran">
+                            <label class="form-check-label" for="marcaVotoran">Votoran</label>
+                            <span class="badge bg-light text-dark float-end">12</span>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="marcaTigre">
+                            <label class="form-check-label" for="marcaTigre">Tigre</label>
+                            <span class="badge bg-light text-dark float-end">8</span>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="marcaCoral">
+                            <label class="form-check-label" for="marcaCoral">Coral</label>
+                            <span class="badge bg-light text-dark float-end">15</span>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="marca3M">
+                            <label class="form-check-label" for="marca3M">3M</label>
+                            <span class="badge bg-light text-dark float-end">5</span>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="marcaDeca">
+                            <label class="form-check-label" for="marcaDeca">Deca</label>
+                            <span class="badge bg-light text-dark float-end">7</span>
+                        </div>
+                        <button class="btn btn-sm btn-link p-0 mt-2">Ver todas</button>
+                    </div>
+                </div>
+                
+                <div class="filter-card">
+                    <div class="filter-header" data-bs-toggle="collapse" href="#avaliacaoFilter">
+                        <h5 class="mb-0"><i class="bi bi-star-fill me-2"></i>Avaliações</h5>
+                    </div>
+                    <div class="filter-body collapse show" id="avaliacaoFilter">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="rating5">
+                            <label class="form-check-label" for="rating5">
+                                <span class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </span>
+                            </label>
+                            <span class="badge bg-light text-dark float-end">23</span>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="rating4">
+                            <label class="form-check-label" for="rating4">
+                                <span class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </span>
+                            </label>
+                            <span class="badge bg-light text-dark float-end">42</span>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="rating3">
+                            <label class="form-check-label" for="rating3">
+                                <span class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </span>
+                            </label>
+                            <span class="badge bg-light text-dark float-end">18</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filter-card">
+                    <div class="filter-header" data-bs-toggle="collapse" href="#estoqueFilter">
+                        <h5 class="mb-0"><i class="bi bi-box-seam me-2"></i>Disponibilidade</h5>
+                    </div>
+                    <div class="filter-body collapse show" id="estoqueFilter">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="emEstoque">
+                            <label class="form-check-label" for="emEstoque">Em estoque</label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="esgotado">
+                            <label class="form-check-label" for="esgotado">Esgotado</label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Lista de produtos -->
+            <section class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <label for="sortBy" class="form-label mb-0">Ordenar por:</label>
+                        </div>
+                        <select class="form-select" id="sortBy" style="width: auto;">
+                            <option selected>Relevância</option>
+                            <option value="price-asc">Preço: menor para maior</option>
+                            <option value="price-desc">Preço: maior para menor</option>
+                            <option value="name-asc">Nome: A-Z</option>
+                            <option value="name-desc">Nome: Z-A</option>
+                            <option value="rating">Melhores avaliações</option>
+                            <option value="newest">Mais recentes</option>
+                        </select>
+                    </div>
+                    <div class="text-muted">
+                        Mostrando <span class="fw-bold">1-12</span> de <span class="fw-bold">156</span> produtos
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <!-- Produto 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="product-img-container position-relative">
+                                <img src="https://m.media-amazon.com/images/I/71yV6O6btUL._AC_SL1500_.jpg" class="product-img" alt="Cimento CP II 32kg">
+                                <span class="product-badge badge bg-danger">Promoção</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="rating mb-2">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <small class="text-muted ms-1">(24)</small>
+                                </div>
+                                <h5 class="card-title product-title">Cimento CP II 32kg</h5>
+                                <p class="card-text text-muted small">Cimento Portland Composto para obras em geral.</p>
+                                <div class="mb-2">
+                                    <span class="product-price">R$ 35,90</span>
+                                    <span class="product-old-price ms-2">R$ 39,90</span>
+                                </div>
+                                <div class="product-stock in-stock mb-2">
+                                    <i class="bi bi-check-circle-fill"></i> Em estoque (15 unidades)
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-primary flex-grow-1 ms-2">
+                                        <i class="bi bi-cart-plus"></i> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Produto 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="product-img-container position-relative">
+                                <img src="https://m.media-amazon.com/images/I/61Uw3ZQhWoL._AC_SL1000_.jpg" class="product-img" alt="Tijolo Baiano">
+                                <span class="product-badge badge bg-success">Mais Vendido</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="rating mb-2">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <small class="text-muted ms-1">(18)</small>
+                                </div>
+                                <h5 class="card-title product-title">Tijolo Baiano 8 furos 9x14x24cm</h5>
+                                <p class="card-text text-muted small">Tijolo cerâmico para alvenaria estrutural.</p>
+                                <div class="mb-2">
+                                    <span class="product-price">R$ 1,29</span>
+                                    <span class="text-muted small">/unidade</span>
+                                </div>
+                                <div class="product-stock in-stock mb-2">
+                                    <i class="bi bi-check-circle-fill"></i> Em estoque (1200 unidades)
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-primary flex-grow-1 ms-2">
+                                        <i class="bi bi-cart-plus"></i> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Produto 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="product-img-container position-relative">
+                                <img src="https://m.media-amazon.com/images/I/71ZxY5v3H1L._AC_SL1500_.jpg" class="product-img" alt="Tinta Coral">
+                            </div>
+                            <div class="card-body">
+                                <div class="rating mb-2">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <small class="text-muted ms-1">(36)</small>
+                                </div>
+                                <h5 class="card-title product-title">Tinta Coral Premium 18L</h5>
+                                <p class="card-text text-muted small">Tinta acrílica fosca para paredes internas.</p>
+                                <div class="mb-2">
+                                    <span class="product-price">R$ 189,90</span>
+                                </div>
+                                <div class="product-stock low-stock mb-2">
+                                    <i class="bi bi-exclamation-triangle-fill"></i> Últimas unidades (3)
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-primary flex-grow-1 ms-2">
+                                        <i class="bi bi-cart-plus"></i> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Produto 4 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="product-img-container position-relative">
+                                <img src="https://m.media-amazon.com/images/I/61JQw4G9VBL._AC_SL1500_.jpg" class="product-img" alt="Tubo PVC">
+                                <span class="product-badge badge bg-info">Novidade</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="rating mb-2">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <small class="text-muted ms-1">(5)</small>
+                                </div>
+                                <h5 class="card-title product-title">Tubo PVC Soldável 100mm 3m</h5>
+                                <p class="card-text text-muted small">Tubo para esgoto e águas pluviais.</p>
+                                <div class="mb-2">
+                                    <span class="product-price">R$ 42,50</span>
+                                </div>
+                                <div class="product-stock in-stock mb-2">
+                                    <i class="bi bi-check-circle-fill"></i> Em estoque (28 unidades)
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-primary flex-grow-1 ms-2">
+                                        <i class="bi bi-cart-plus"></i> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Produto 5 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="product-img-container position-relative">
+                                <img src="https://m.media-amazon.com/images/I/61p8xY7QmGL._AC_SL1500_.jpg" class="product-img" alt="Furadeira">
+                            </div>
+                            <div class="card-body">
+                                <div class="rating mb-2">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                    <small class="text-muted ms-1">(47)</small>
+                                </div>
+                                <h5 class="card-title product-title">Furadeira Percussão 500W</h5>
+                                <p class="card-text text-muted small">Furadeira com função impacto e velocidade variável.</p>
+                                <div class="mb-2">
+                                    <span class="product-price">R$ 229,90</span>
+                                    <span class="product-old-price ms-2">R$ 259,90</span>
+                                </div>
+                                <div class="product-stock in-stock mb-2">
+                                    <i class="bi bi-check-circle-fill"></i> Em estoque (9 unidades)
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-primary flex-grow-1 ms-2">
+                                        <i class="bi bi-cart-plus"></i> Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Produto 6 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="product-img-container position-relative">
+                                <img src="https://m.media-amazon.com/images/I/61YyMZhX5BL._AC_SL1500_.jpg" class="product-img" alt="Piso Cerâmico">
+                                <span class="product-badge badge bg-warning text-dark">Oferta</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="rating mb-2">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <small class="text-muted ms-1">(31)</small>
+                                </div>
+                                <h5 class="card-title product-title">Piso Cerâmico 45x45cm Caixa 1,62m²</h5>
+                                <p class="card-text text-muted small">Piso esmaltado para áreas internas.</p>
+                                <div class="mb-2">
+                                    <span class="product-price">R$ 89,90</span>
+                                    <span class="product-old-price ms-2">R$ 109,90</span>
+                                </div>
+                                <div class="product-stock out-of-stock mb-2">
+                                    <i class="bi bi-x-circle-fill"></i> Esgotado
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-sm btn-outline-secondary">
+                                        <i class="bi bi-heart"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-primary flex-grow-1 ms-2" disabled>
+                                        <i class="bi bi-cart-plus"></i> Esgotado
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Paginação -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Próxima</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-3"><i class="bi bi-house-gear-fill"></i> Materiais do Théo</h5>
+                    <p>Tudo para sua obra em um só lugar. Os melhores materiais de construção com os melhores preços da região.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-whatsapp fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-3">Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50">Início</a></li>
+                        <li class="mb-2"><a href="produtos.html" class="text-white-50">Produtos</a></li>
+                        <li class="mb-2"><a href="sobre.html" class="text-white-50">Sobre Nós</a></li>
+                        <li class="mb-2"><a href="contato.html" class="text-white-50">Contato</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-white-50">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-3">Categorias</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Cimentos</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Tintas</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Hidráulica</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Elétrica</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Ferramentas</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-3">Contato</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i> Rua dos Materiais, 123 - Centro</li>
+                        <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i> (11) 1234-5678</li>
+                        <li class="mb-2"><i class="bi bi-whatsapp me-2"></i> (11) 98765-4321</li>
+                        <li class="mb-2"><i class="bi bi-envelope-fill me-2"></i> contato@materialsdotheo.com.br</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small mb-0">&copy; 2023 Materiais do Théo. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">
+                        <a href="#" class="text-white-50">Termos de Uso</a> | 
+                        <a href="#" class="text-white-50">Política de Privacidade</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Script para sincronizar o range de preço com os inputs
+        const priceRange = document.getElementById('priceRange');
+        const minPrice = document.getElementById('minPrice');
+        const maxPrice = document.getElementById('maxPrice');
+        
+        priceRange.addEventListener('input', function() {
+            maxPrice.value = this.value;
+        });
+        
+        maxPrice.addEventListener('input', function() {
+            if (parseInt(this.value) > 1000) {
+                this.value = 1000;
+            }
+            priceRange.value = this.value;
+        });
+        
+        minPrice.addEventListener('input', function() {
+            if (parseInt(this.value) < 0) {
+                this.value = 0;
+            }
+        });
+    </script>
+</body>
+</html>
