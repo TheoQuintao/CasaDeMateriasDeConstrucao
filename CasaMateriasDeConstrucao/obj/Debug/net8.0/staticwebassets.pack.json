@@ -1,16 +1,24 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\index.html",
+      "Id": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\cadastro.html",
+      "PackagePath": "staticwebassets\\cadastro.html"
+    },
+    {
+      "Id": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\protudos.html",
-      "PackagePath": "staticwebassets\\protudos.html"
+      "Id": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
     },
     {
-      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\style.css",
-      "PackagePath": "staticwebassets\\style.css"
+      "Id": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\protudos.html",
+      "PackagePath": "staticwebassets\\protudos.html"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CasaMateriasDeConstrucao.Microsoft.AspNetCore.StaticWebAssets.props",

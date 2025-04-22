@@ -1,0 +1,167 @@
+
+        .products-header {
+            background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+            background-size: cover;
+            padding: 80px 0;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .products-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .products-header-content {
+            position: relative;
+            color: white;
+        }
+        
+        .breadcrumb {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            padding: 10px 15px;
+        }
+        
+        .filter-card {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .filter-header {
+            background-color: var(--bs-primary);
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        
+        .filter-body {
+            padding: 15px;
+            background-color: white;
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-img-container {
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+        }
+        
+        .product-img {
+            max-height: 100%;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+        }
+        
+        .product-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .product-price {
+            font-weight: bold;
+            color: var(--bs-primary);
+            font-size: 1.2rem;
+        }
+        
+        .product-old-price {
+            text-decoration: line-through;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .product-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        
+        .pagination .page-item.active .page-link {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        
+        .pagination .page-link {
+            color: var(--bs-primary);
+        }
+        
+        .category-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .category-list li {
+            margin-bottom: 5px;
+        }
+        
+        .category-list a {
+            color: #495057;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .category-list a:hover {
+            color: var(--bs-primary);
+            padding-left: 5px;
+        }
+        
+        .rating {
+            color: #ffc107;
+            margin-bottom: 5px;
+        }
+        
+        .product-stock {
+            font-size: 0.9rem;
+        }
+        
+        .in-stock {
+            color: #28a745;
+        }
+        
+        .low-stock {
+            color: #ffc107;
+        }
+        
+        .out-of-stock {
+            color: #dc3545;
+        }
+        
+        @media (max-width: 768px) {
+            .filter-sidebar {
+                margin-bottom: 30px;
+            }
+            
+            .product-img-container {
+                height: 150px;
+            }
+        }
