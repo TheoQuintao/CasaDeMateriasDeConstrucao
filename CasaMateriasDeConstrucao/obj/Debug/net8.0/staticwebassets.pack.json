@@ -1,23 +1,51 @@
 {
   "Files": [
     {
-      "Id": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\cadastro.html",
+      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\cadastro.html",
       "PackagePath": "staticwebassets\\cadastro.html"
     },
     {
-      "Id": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\style.css",
+      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\produtos.css",
+      "PackagePath": "staticwebassets\\css\\produtos.css"
+    },
+    {
+      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\register.css",
+      "PackagePath": "staticwebassets\\css\\register.css"
+    },
+    {
+      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\index.html",
+      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\login.html",
+      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\js\\cadastro.js",
+      "PackagePath": "staticwebassets\\js\\cadastro.js"
+    },
+    {
+      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\js\\produtos.js",
+      "PackagePath": "staticwebassets\\js\\produtos.js"
+    },
+    {
+      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\login.html",
       "PackagePath": "staticwebassets\\login.html"
     },
     {
-      "Id": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\protudos.html",
+      "Id": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\protudos.html",
       "PackagePath": "staticwebassets\\protudos.html"
     },
     {
