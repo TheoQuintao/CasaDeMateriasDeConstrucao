@@ -1,4 +1,4 @@
-import 'Data/banco.js'
+
 
 (function () {
     'use strict'
