@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3i0y/z+xvSwWL82pWogctfx3YrYFS68aHrQPmjaShKo=",
+  "Hash": "+5Ku/wk2/0rrNNtxlvrd1WWI/eIAlB9B3nblKzNYUpU=",
   "Source": "CasaMateriasDeConstrucao",
   "BasePath": "_content/CasaMateriasDeConstrucao",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CasaMateriasDeConstrucao\\wwwroot",
       "Source": "CasaMateriasDeConstrucao",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "ContentRoot": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
       "BasePath": "_content/CasaMateriasDeConstrucao",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\cadastro.html",
+      "Identity": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\cadastro.html",
       "SourceId": "CasaMateriasDeConstrucao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "ContentRoot": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
       "BasePath": "_content/CasaMateriasDeConstrucao",
       "RelativePath": "cadastro.html",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\cadastro.html"
     },
     {
-      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\login.css",
+      "Identity": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\login.css",
       "SourceId": "CasaMateriasDeConstrucao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "ContentRoot": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
       "BasePath": "_content/CasaMateriasDeConstrucao",
       "RelativePath": "css/login.css",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
-      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\produtos.css",
+      "Identity": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\produtos.css",
       "SourceId": "CasaMateriasDeConstrucao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "ContentRoot": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
       "BasePath": "_content/CasaMateriasDeConstrucao",
       "RelativePath": "css/produtos.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\produtos.css"
     },
     {
-      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\register.css",
+      "Identity": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\register.css",
       "SourceId": "CasaMateriasDeConstrucao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "ContentRoot": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
       "BasePath": "_content/CasaMateriasDeConstrucao",
       "RelativePath": "css/register.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\register.css"
     },
     {
-      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\style.css",
+      "Identity": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\css\\style.css",
       "SourceId": "CasaMateriasDeConstrucao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "ContentRoot": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
       "BasePath": "_content/CasaMateriasDeConstrucao",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\index.html",
+      "Identity": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\index.html",
       "SourceId": "CasaMateriasDeConstrucao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "ContentRoot": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
       "BasePath": "_content/CasaMateriasDeConstrucao",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\js\\cadastro.js",
+      "Identity": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\js\\cadastro.js",
       "SourceId": "CasaMateriasDeConstrucao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "ContentRoot": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
       "BasePath": "_content/CasaMateriasDeConstrucao",
       "RelativePath": "js/cadastro.js",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\js\\cadastro.js"
     },
     {
-      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\js\\index.js",
+      "Identity": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\js\\index.js",
       "SourceId": "CasaMateriasDeConstrucao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "ContentRoot": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
       "BasePath": "_content/CasaMateriasDeConstrucao",
       "RelativePath": "js/index.js",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\js\\index.js"
     },
     {
-      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\js\\login.js",
+      "Identity": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\js\\login.js",
       "SourceId": "CasaMateriasDeConstrucao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "ContentRoot": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
       "BasePath": "_content/CasaMateriasDeConstrucao",
       "RelativePath": "js/login.js",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\js\\login.js"
     },
     {
-      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\js\\produtos.js",
+      "Identity": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\js\\produtos.js",
       "SourceId": "CasaMateriasDeConstrucao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "ContentRoot": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
       "BasePath": "_content/CasaMateriasDeConstrucao",
       "RelativePath": "js/produtos.js",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\js\\produtos.js"
     },
     {
-      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\login.html",
+      "Identity": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\login.html",
       "SourceId": "CasaMateriasDeConstrucao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "ContentRoot": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
       "BasePath": "_content/CasaMateriasDeConstrucao",
       "RelativePath": "login.html",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\login.html"
     },
     {
-      "Identity": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\protudos.html",
+      "Identity": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\protudos.html",
       "SourceId": "CasaMateriasDeConstrucao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
+      "ContentRoot": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\wwwroot\\",
       "BasePath": "_content/CasaMateriasDeConstrucao",
       "RelativePath": "protudos.html",
       "AssetKind": "All",

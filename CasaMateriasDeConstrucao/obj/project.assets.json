@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Alunos\\.nuget\\packages\\": {}
+    "C:\\Users\\theoo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\CasaMateriasDeConstrucao.csproj",
+      "projectUniqueName": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\CasaMateriasDeConstrucao.csproj",
       "projectName": "CasaMateriasDeConstrucao",
-      "projectPath": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\CasaMateriasDeConstrucao.csproj",
-      "packagesPath": "C:\\Users\\Alunos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alunos\\OneDrive\\Documentos\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\obj\\",
+      "projectPath": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\CasaMateriasDeConstrucao.csproj",
+      "packagesPath": "C:\\Users\\theoo\\.nuget\\packages\\",
+      "outputPath": "D:\\GitTheo\\CasaDeMateriasDeConstrucao\\CasaMateriasDeConstrucao\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Alunos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\theoo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

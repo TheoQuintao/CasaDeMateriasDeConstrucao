@@ -54,3 +54,5 @@ D:\GitTheo\CasaDeMateriasDeConstrucao\CasaMateriasDeConstrucao\obj\Debug\net8.0\
 D:\GitTheo\CasaDeMateriasDeConstrucao\CasaMateriasDeConstrucao\obj\Debug\net8.0\ref\CasaMateriasDeConstrucao.dll
 C:\Users\Alunos\OneDrive\Documentos\GitTheo\CasaDeMateriasDeConstrucao\CasaMateriasDeConstrucao\bin\Debug\net8.0\Data\package-lock.json
 C:\Users\Alunos\OneDrive\Documentos\GitTheo\CasaDeMateriasDeConstrucao\CasaMateriasDeConstrucao\bin\Debug\net8.0\Data\package.json
+D:\GitTheo\CasaDeMateriasDeConstrucao\CasaMateriasDeConstrucao\bin\Debug\net8.0\Data\package-lock.json
+D:\GitTheo\CasaDeMateriasDeConstrucao\CasaMateriasDeConstrucao\bin\Debug\net8.0\Data\package.json
