@@ -56,3 +56,4 @@ C:\Users\Alunos\OneDrive\Documentos\GitTheo\CasaDeMateriasDeConstrucao\CasaMater
 C:\Users\Alunos\OneDrive\Documentos\GitTheo\CasaDeMateriasDeConstrucao\CasaMateriasDeConstrucao\bin\Debug\net8.0\Data\package.json
 D:\GitTheo\CasaDeMateriasDeConstrucao\CasaMateriasDeConstrucao\bin\Debug\net8.0\Data\package-lock.json
 D:\GitTheo\CasaDeMateriasDeConstrucao\CasaMateriasDeConstrucao\bin\Debug\net8.0\Data\package.json
+C:\Users\Alunos\OneDrive\Documentos\GitTheo\CasaDeMateriasDeConstrucao\CasaMateriasDeConstrucao\obj\Debug\net8.0\CasaMateriasDeConstrucao.csproj.AssemblyReference.cache

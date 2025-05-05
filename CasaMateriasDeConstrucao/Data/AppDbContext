@@ -1,0 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+
+namespace CasaMateriasDeConstrucao.Data
+{
+    public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+        public DbSet<Enderecos> endereco { get; set; }
+        public DbSet<Usuarios> usuario { get; set; }
+        public DbSet<Comentarios> comentario { get; set; }
+        public DbSet<Marca_produtos> marca { get; set; }
+        public DbSet<Categoria_produtos> categoria { get; set; }
+        public DbSet<Produtos> produto { get; set; }
+    }
+}
