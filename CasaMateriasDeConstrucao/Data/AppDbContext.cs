@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace CasaMateriasDeConstrucao.Data
+namespace CasaDeMateriasDeConstrucao
 {
     public class AppDbContext : DbContext
     {

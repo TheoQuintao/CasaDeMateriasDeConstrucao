@@ -1,0 +1,85 @@
+CREATE DATABASE materiaisdotheo;
+USE materiaisdotheo;
+
+CREATE TABLE IF NOT EXISTS endereco (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cep VARCHAR(9) NOT NULL,
+    logadouro VARCHAR(255) NOT NULL,
+    numero INT,
+    complemento VARCHAR(255),
+    bairro VARCHAR(255) NOT NULL,
+    cidade VARCHAR(255) NOT NULL,
+    estado VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    cpf VARCHAR(11) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    telefone VARCHAR(15),
+    senha VARCHAR(255) NOT NULL,
+    endereco_id INT NOT NULL,
+    CONSTRAINT fk_usuario_endereco FOREIGN KEY (endereco_id) 
+        REFERENCES endereco(id) 
+        ON DELETE RESTRICT 
+        ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS comentarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    img VARCHAR(255) NOT NULL,
+    nome VARCHAR(255) NOT NULL,
+    profissao VARCHAR(255) NOT NULL,
+    comentario VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS categoria_produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS marca_produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    img VARCHAR(255) NOT NULL,
+    titulo VARCHAR(255) NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    valor DOUBLE NOT NULL,
+    desconto DOUBLE,
+    categoria_id INT NOT NULL,
+    marca_id INT NOT NULL,
+    CONSTRAINT fk_produtos_categoria_produtos
+        FOREIGN KEY (categoria_id)
+        REFERENCES categoria_produtos(id)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE,
+    CONSTRAINT fk_produtos_marca_produtos
+        FOREIGN KEY (marca_id)
+        REFERENCES marca_produtos(id)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE
+);
+
+INSERT INTO endereco (cep, logadouro, numero, complemento, bairro, cidade, estado)
+VALUES ('12345-678', 'Rua Exemplo', 100, 'Apto 101', 'Centro', 'São Paulo', 'SP');
+
+INSERT INTO usuario (nome, cpf, email, telefone, senha, endereco_id)
+VALUES ('João Silva', '12345678901', 'joao@email.com', '(11)91234-5678', 'senha123', 1);
+
+INSERT INTO comentarios (img, nome, profissao, comentario)
+VALUES ('usuario1.jpg', 'Maria Oliveira', 'Designer', 'Excelente serviço, recomendo!');
+
+INSERT INTO categoria_produtos (nome)
+VALUES ('Eletrônicos');
+
+INSERT INTO marca_produtos (nome)
+VALUES ('TechBrand');
+
+INSERT INTO produtos (img, titulo, descricao, valor, desconto, categoria_id, marca_id)
+VALUES ('smartphone.jpg', 'Smartphone X', 'Alta performance, tela AMOLED, 128GB', 1999.99, 10.0, 1, 1);
+
